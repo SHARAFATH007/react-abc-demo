@@ -19,14 +19,27 @@ export default function App() {
   );
 }
 function Welcome(props) {
-  const name = props.name;
-  console.log(props.name);
-  console.log(name);
+  // const name = props.name;
+  console.log(props);
+
   return (
     <div>
       <img className="user-pic" src={props.pic} alt={props.name} />
       <h1>
-        Hi🤞, <span class="name">{name}😍</span>
+        Assalam, <span class="name">{name}😍</span>
+      </h1>
+    </div>
+  );
+}
+
+function Msg(props) {
+  console.log(props);
+  const { pic, name } = props;
+  return (
+    <div>
+      <img className="user-pic" src={pic} alt={name} />
+      <h1>
+        Hi, <span class="name">{name}😍</span>
       </h1>
     </div>
   );
